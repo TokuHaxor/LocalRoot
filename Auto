@@ -166,7 +166,7 @@ system("rm pwnkit");
 system("rm overlays");
 system("rm lpe.sh");
 system("rm dirtypipe");
-system("rm exp");
+system("rm exp_file_credential");
 system("rm -f pwnkit");
 system("rm -rf GCONV_PATH=.");
 system("rm -rf .pkexec");
